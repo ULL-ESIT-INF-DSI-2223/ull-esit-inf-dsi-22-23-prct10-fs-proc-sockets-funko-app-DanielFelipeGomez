@@ -1,0 +1,229 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ull-esit-inf-dsi-22-23-prct09-funko-app-DanielFelipeGomez</title><meta name="description" content="Documentation for ull-esit-inf-dsi-22-23-prct09-funko-app-DanielFelipeGomez"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">ull-esit-inf-dsi-22-23-prct09-funko-app-DanielFelipeGomez</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>ull-esit-inf-dsi-22-23-prct09-funko-app-DanielFelipeGomez</h2></div>
+<div class="tsd-panel tsd-typography">
+<a href="#práctica-9---aplicación-de-registro-de-funko-pops" id="práctica-9---aplicación-de-registro-de-funko-pops" style="color: inherit; text-decoration: none;">
+  <h1>Práctica 9 - Aplicación de registro de Funko Pops</h1>
+</a>
+
+<a href="#desarrollado-por-daniel-felipe-gómez-aristizabal" id="desarrollado-por-daniel-felipe-gómez-aristizabal" style="color: inherit; text-decoration: none;">
+  <h2>Desarrollado por Daniel Felipe Gómez Aristizabal</h2>
+</a>
+
+<a href="#indice" id="indice" style="color: inherit; text-decoration: none;">
+  <h2>Indice</h2>
+</a>
+<ol>
+<li><p><a href="#introduccion">Introducción</a></p>
+</li>
+<li><p><a href="#hablemos-de-yarg">Hablemos de Yarg</a></p>
+</li>
+<li><p><a href="#hablemos-de-chalk">Hablemos de Chalk</a></p>
+</li>
+<li><p><a href="#hablemos-de-file-system">Hablemos de File System</a></p>
+</li>
+<li><p><a href="#clase-funko">Clase Funko</a></p>
+</li>
+<li><p><a href="#clase-manejadorjson">Clase ManejadorJSON</a></p>
+</li>
+<li><p><a href="#clase-menufunko">Clase MenuFunko</a></p>
+</li>
+<li><p><a href="#enumerables">Enumerables</a></p>
+</li>
+<li><p><a href="#interfaces">Interfaces</a></p>
+</li>
+<li><p><a href="#ejemplo-de-uso">Ejemplo de uso</a></p>
+</li>
+</ol>
+
+<a href="#introducción" id="introducción" style="color: inherit; text-decoration: none;">
+  <h2>Introducción</h2>
+</a>
+<p>En la práctica se pretende desarrollar una aplicación para coleccionar Funkos, el usuario solo podrá usar la línea de comandos para manejar la aplicación, para poder gestionar os argumentos usados, usaremos la librería Yarg. Por otro lado, usaremos la librería Chalk que nos permitirá personalizar nuestros mensajes de salida. Finalmente, usaremos la librería File System para poder leer y escribir archivos JSON, además de crear directorios.</p>
+
+<a href="#hablemos-de-yarg" id="hablemos-de-yarg" style="color: inherit; text-decoration: none;">
+  <h2>Hablemos de Yarg</h2>
+</a>
+<p>Yarg es bastante sencilla a mi parecer a comparación de lo que suponía en otros lenguajes de programación trabajar con argumentos. Realmente me ha parecido útil el poder crear una serie de menús según el comando principal que se pretenda usar y el menú de ayuda es bastante intuitivo y de verdad &#39;ayuda&#39; a ubicar el error.</p>
+
+<a href="#hablemos-de-chalk" id="hablemos-de-chalk" style="color: inherit; text-decoration: none;">
+  <h2>Hablemos de Chalk</h2>
+</a>
+<p>Recuerdo que para las primeras prácticas intente hacer uso de esta librería para imprimir de una forma más agradable algunas funciones, pero no me funcionó, por lo que me rendí en su entonces. Sin embargo esta vez ha sido muy sencilla de usar y me ha resultado muy útil, ya que no me es cómodo los colores con los que se suele imprimir en la consola, debido a que no se distinguen bien los mensajes de error y los mensajes normales.</p>
+
+<a href="#hablemos-de-file-system" id="hablemos-de-file-system" style="color: inherit; text-decoration: none;">
+  <h2>Hablemos de File System</h2>
+</a>
+<p>Esta librería es sin duda una herramienta clave, me ha parecido súper sencilla de usar y muy útil, el hecho de realizar comprobaciones de si existe o no un fichero y poder gestionarlas, es realmente sencillo. En mi caso le dí bastante uso ya que de cierta forma la uso en dos clase. Incluso al principio desarrolle un menú muy diferente al que finalmente implementé, ya que en un principio pese que los Funkos no se podían crear, sino que ya existían en un fichero y se podían &#39;comprar&#39;. Es por esto que en un principio desarrolle un fichero con varios Funkos, para simular una tienda.</p>
+
+<a href="#clase-funko" id="clase-funko" style="color: inherit; text-decoration: none;">
+  <h2>Clase Funko</h2>
+</a>
+<p>Esta clase permite modelar el comportamiento que tendrá un Funko, definí todos los atributos del Funko protected, esto con el fin de dejarlo abierto a herencia por si se requiere en un futuro. </p>
+<p>Para definir el Funko, uso un constructor simplificado que proporciona el lenguaje. Dentro me aseguro de que no se pasen valores inválidos de creación, por ejemplo, que el nombre no sea un string vacío, que el valor introducido no sea negativo y que el identificador de Funko sea un número entero.</p>
+<p>Definí los respectivos <em>getters</em> para las propiedades, las cuales listaré a continuación:</p>
+<ul>
+<li><p><strong>id</strong>: Identificador del Funko</p>
+</li>
+<li><p><strong>nombre</strong>: Nombre del Funko</p>
+</li>
+<li><p><strong>descripcion</strong>: Descripción del Funko</p>
+</li>
+<li><p><strong>tipo</strong>: Tipo de Funko</p>
+</li>
+<li><p><strong>genero</strong>: Género del Funko</p>
+</li>
+<li><p><strong>franquicia</strong>: Franquicia del Funko</p>
+</li>
+<li><p><strong>numero</strong>: Número del Funko</p>
+</li>
+<li><p><strong>exclusivo</strong>: Indica si el Funko es exclusivo</p>
+</li>
+<li><p><strong>caracteristica_especial</strong>: Característica especial del Funko</p>
+</li>
+<li><p><strong>valor_mercado</strong>: Valor de mercado del Funko</p>
+</li>
+</ul>
+<p>Finalmente definí el método <em>toString</em> que me permite imprimir el Funko más legible y además añadí los rangos de precio que se pedían en la práctica.</p>
+
+<a href="#clase-manejadorjson" id="clase-manejadorjson" style="color: inherit; text-decoration: none;">
+  <h2>Clase ManejadorJSON</h2>
+</a>
+<p>Esta clase agrupa las distintas funcionalidades que desarrollé para manejar ficheros JSON y crear directorios. La idea es que no se creen objetos de esta clase, simplemente se usen sus funciones estáticas.</p>
+<p>Desarrolle una función <em>crearDirectorio</em>, la cual como su nombre lo indica, crea un directorio. Recibe como parámetro el nombre del directorio a crear. y comprueba si existe, en caso de que no exista, lo crea. Esta operación se encierra dentro de un bloque <em>try-catch</em>, para asegurarnos de notificar cualquier error que se presente.</p>
+<p>Incluí un método <em>agregarLineaJSON</em>, que recibe como parámetros el nombre del fichero y el contenido del fichero. Como tipo de contenido definí <em>object</em>, para generalizar el comportamiento de los métodos. Lo mismo ocurre en el método <em>crearJSON</em> que cumple la misma función que el anterior, pero en este caso si existe ya un fichero, lo sobrescribe.</p>
+<p>Se ha incluido un método <em>eliminarJSON</em>, este verifica si el fichero existe, en caso de que exista, lo elimina. En caso de que no exista, notifica al usuario. Nuevamente estos métodos se encierra dentro de un bloque <em>try-catch</em>, para asegurarnos de notificar cualquier error que se presente.</p>
+<p>Finalmente, se ha incluido un método <em>leerJSON</em>, el cual recibe como parámetro el nombre del fichero a leer. Este método lee el fichero y devuelve el contenido del mismo. En caso de que no exista el fichero, devuelve un array vacío.</p>
+
+<a href="#clase-menufunko" id="clase-menufunko" style="color: inherit; text-decoration: none;">
+  <h2>Clase MenuFunko</h2>
+</a>
+<p>Similar a lo planeado en la clase anterior de ManejadorJSON, esta clase agrupa las distintas funcionalidades que desarrollé para manejar los Funkos. Nuevamente no se pretenden crear objetos de esta clase, simplemente se usará su función de menú, que se encargará de manejar los argumentos introducidos por el usuario, para llamar a los métodos encargados de realizar las acciones.</p>
+<p>Tenemos entonces métodos como <em>agregarFunko</em>, <em>modificarFunko</em>, <em>eliminarFunko</em>, <em>listarFunko</em>, <em>mostrarFunko</em>. Estos básicamente toman los argumentos dados y construyen en nombre correspondiente para llamar a los métodos ya definidos de <em>ManejadorJSON</em>.</p>
+<p>Importante mencionar que la creación de los ficheros para almacenar a un Funko, decidí hacerlo a partir del id del Funko, de esta forma se impide que se creen dos Funkos con el mismo id.</p>
+<p>También destacar que el código se vio muy simplificado gracias a que el nombre de usuario se pasa en todas las llamadas a las funciones, por lo que con construir la cadena que define su ruta de almacenamiento, se puede acceder a los ficheros de cada usuario.</p>
+<p>Para finalizar, el <em>controladorMenuFunko</em> almacena todo el menú de posibilidades que se le ofrece al usuario, y según la opción que elija, se llama a la función correspondiente.</p>
+
+<a href="#enumerables" id="enumerables" style="color: inherit; text-decoration: none;">
+  <h2>Enumerables</h2>
+</a>
+<p>Para la práctica se nos pedían definir dos enumerables que modelaran; el tipo de Funko y el género del Funko.</p>
+
+<a href="#tipofunko" id="tipofunko" style="color: inherit; text-decoration: none;">
+  <h3>TipoFunko</h3>
+</a>
+<p>Debo confesar que desconozco el mundo de los Funkos, asi que me limité a usar los tipos que se proponían de ejemplo en el guion de la práctica. Es así como definí 4 tipos de Funkos, los cuales son:</p>
+<ul>
+<li><p><strong>Pop!</strong>: Funko de la serie Pop!</p>
+</li>
+<li><p><strong>Pop! Rides</strong>: Funko de la serie Pop! Rides</p>
+</li>
+<li><p><strong>Vynil Gold</strong>: Funko de la serie Vynil Gold</p>
+</li>
+<li><p><strong>Vynl Soda</strong>: Funko de la serie Vynil Soda</p>
+</li>
+</ul>
+
+<a href="#generofunko" id="generofunko" style="color: inherit; text-decoration: none;">
+  <h3>GeneroFunko</h3>
+</a>
+<p>En este caso me inventé 4 <em>géneros de Funkos</em>, un poco graciosos pero que supongo no quedan tan desubicados. Los géneros son:</p>
+<ul>
+<li><p><strong>Comidas y Sabores</strong>: Funkos de comidas y sabores, según yo son muñecos en forma de comida.</p>
+</li>
+<li><p><strong>Deportistas</strong>: Funkos de deportes, por ejemplo, de jugadores de futbol.</p>
+</li>
+<li><p><strong>Profesiones</strong>: Funkos de profesiones, por ejemplo, de médicos.</p>
+</li>
+<li><p><strong>Galacticos</strong>: Funkos que son de otra liga, galácticos.</p>
+</li>
+</ul>
+
+<a href="#interfaces" id="interfaces" style="color: inherit; text-decoration: none;">
+  <h2>Interfaces</h2>
+</a>
+<p>Definí dos interfaces, una define la forma que debe tener un objeto Funko y otra la use para definir la forma de recuperar y añadir un Funko a un fichero JSON. De esta forma se puede construir fácilmente un objeto Funko a partir de un fichero JSON y viceversa.</p>
+
+<a href="#ejemplo-de-uso" id="ejemplo-de-uso" style="color: inherit; text-decoration: none;">
+  <h2>Ejemplo de uso</h2>
+</a>
+<p>A continuación dejo un ejemplo de uso para cada opción que ofrece el programa.</p>
+
+<a href="#añadir-un-funko" id="añadir-un-funko" style="color: inherit; text-decoration: none;">
+  <h3>Añadir un Funko</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">node</span><span class="hl-0"> </span><span class="hl-1">dist/index.js</span><span class="hl-0"> </span><span class="hl-1">add</span><span class="hl-0"> </span><span class="hl-1">--user</span><span class="hl-0"> </span><span class="hl-1">&quot;Dani&quot;</span><span class="hl-0"> </span><span class="hl-1">--id</span><span class="hl-0"> </span><span class="hl-2">2</span><span class="hl-0"> </span><span class="hl-1">--nombre</span><span class="hl-0"> </span><span class="hl-1">&quot;Poco&quot;</span><span class="hl-0"> </span><span class="hl-1">--descripcion</span><span class="hl-0"> </span><span class="hl-1">&quot;Un poquito loco&quot;</span><span class="hl-0"> </span><span class="hl-1">--tipo</span><span class="hl-0"> </span><span class="hl-1">&quot;Pop!&quot;</span><span class="hl-0"> </span><span class="hl-1">--genero</span><span class="hl-0"> </span><span class="hl-1">&quot;Comidas y Sabores&quot;</span><span class="hl-0"> </span><span class="hl-1">--franquicia</span><span class="hl-0"> </span><span class="hl-1">&quot;BrawlStars&quot;</span><span class="hl-0"> </span><span class="hl-1">--numero</span><span class="hl-0"> </span><span class="hl-2">4</span><span class="hl-0"> </span><span class="hl-1">--exclusivo</span><span class="hl-0"> </span><span class="hl-1">--caracteristica_especial</span><span class="hl-0"> </span><span class="hl-1">&quot;Toca musica&quot;</span><span class="hl-0"> </span><span class="hl-1">--valor_mercado</span><span class="hl-0"> </span><span class="hl-2">100</span>
+</code></pre>
+
+<a href="#modificar-un-funko-existente" id="modificar-un-funko-existente" style="color: inherit; text-decoration: none;">
+  <h3>Modificar un Funko existente</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">node</span><span class="hl-0"> </span><span class="hl-1">dist/index.js</span><span class="hl-0"> </span><span class="hl-1">update</span><span class="hl-0"> </span><span class="hl-1">--user</span><span class="hl-0"> </span><span class="hl-1">&quot;Dani&quot;</span><span class="hl-0"> </span><span class="hl-1">--id</span><span class="hl-0"> </span><span class="hl-2">2</span><span class="hl-0"> </span><span class="hl-1">--nombre</span><span class="hl-0"> </span><span class="hl-1">&quot;Poco&quot;</span><span class="hl-0"> </span><span class="hl-1">--descripcion</span><span class="hl-0"> </span><span class="hl-1">&quot;Un poquito loco&quot;</span><span class="hl-0"> </span><span class="hl-1">--tipo</span><span class="hl-0"> </span><span class="hl-1">&quot;Pop!&quot;</span><span class="hl-0"> </span><span class="hl-1">--genero</span><span class="hl-0"> </span><span class="hl-1">&quot;Comidas y Sabores&quot;</span><span class="hl-0"> </span><span class="hl-1">--franquicia</span><span class="hl-0"> </span><span class="hl-1">&quot;BrawlStars&quot;</span><span class="hl-0"> </span><span class="hl-1">--numero</span><span class="hl-0"> </span><span class="hl-2">4</span><span class="hl-0"> </span><span class="hl-1">--exclusivo</span><span class="hl-0"> </span><span class="hl-1">--caracteristica_especial</span><span class="hl-0"> </span><span class="hl-1">&quot;Toca musica&quot;</span><span class="hl-0"> </span><span class="hl-1">--valor_mercado</span><span class="hl-0"> </span><span class="hl-2">100</span>
+</code></pre>
+
+<a href="#eliminar-un-funko-existente" id="eliminar-un-funko-existente" style="color: inherit; text-decoration: none;">
+  <h3>Eliminar un Funko existente</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">node</span><span class="hl-0"> </span><span class="hl-1">dist/index.js</span><span class="hl-0"> </span><span class="hl-1">delete</span><span class="hl-0"> </span><span class="hl-1">--user</span><span class="hl-0"> </span><span class="hl-1">&quot;Dani&quot;</span><span class="hl-0"> </span><span class="hl-1">--id</span><span class="hl-0"> </span><span class="hl-2">2</span>
+</code></pre>
+
+<a href="#listar-los-funkos-del-usuario" id="listar-los-funkos-del-usuario" style="color: inherit; text-decoration: none;">
+  <h3>Listar los Funkos del usuario</h3>
+</a>
+<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">node</span><span class="hl-0"> </span><span class="hl-1">dist/index.js</span><span class="hl-0"> </span><span class="hl-1">list</span><span class="hl-0"> </span><span class="hl-1">--user</span><span class="hl-0"> </span><span class="hl-1">&quot;Dani&quot;</span>
+</code></pre>
+
+<a href="#mostrar-un-funko-específico-del-usuario" id="mostrar-un-funko-específico-del-usuario" style="color: inherit; text-decoration: none;">
+  <h4>Mostrar un Funko específico del usuario</h4>
+</a>
+<pre><code class="language-bash"><span class="hl-0">$ </span><span class="hl-1">node</span><span class="hl-0"> </span><span class="hl-1">dist/index.js</span><span class="hl-0"> </span><span class="hl-1">read</span><span class="hl-0"> </span><span class="hl-1">--user</span><span class="hl-0"> </span><span class="hl-1">&quot;Dani&quot;</span><span class="hl-0"> </span><span class="hl-1">--id</span><span class="hl-0"> </span><span class="hl-2">1</span>
+</code></pre>
+
+<a href="#conclusiones" id="conclusiones" style="color: inherit; text-decoration: none;">
+  <h2>Conclusiones</h2>
+</a>
+<p>Esta practica he de reconocer que ha resultado sencilla, pero muy entretenida, me ha gustado bastante pues me ha permitido trabajar de gran forma con varias librerías, que aunque sencillas, resultan bastante útiles. El hecho de conseguir persistencia en los programas es algo realmente útil, ya que le da más sentido a la aplicación pues lo sientes algo más real.</p>
+<p>Además, creo que me ha permitido entender una nueva forma de crear test, pues he probado a crear ficheros para los test y la vez eliminarlos, esto me evita crear conflictos con el funcionamiento del programa y a la vez poder testearlo todo correctamente.</p>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">ull-<wbr/>esit-<wbr/>inf-<wbr/>dsi-<wbr/>22-<wbr/>23-<wbr/>prct09-<wbr/>funko-<wbr/>app-<wbr/>Daniel<wbr/>Felipe<wbr/>Gomez</a>
+<ul>
+<li class="tsd-kind-module"><a href="modules/entities_funko.html">entities/funko</a></li>
+<li class="tsd-kind-module"><a href="modules/enumerables_genero_funko_enum.html">enumerables/genero_<wbr/>funko_<wbr/>enum</a></li>
+<li class="tsd-kind-module"><a href="modules/enumerables_tipo_funko_enum.html">enumerables/tipo_<wbr/>funko_<wbr/>enum</a></li>
+<li class="tsd-kind-module"><a href="modules/handler_manejadorJSON.html">handler/manejadorJSON</a></li>
+<li class="tsd-kind-module"><a href="modules/handler_menuFunko.html">handler/menu<wbr/>Funko</a></li>
+<li class="tsd-kind-module"><a href="modules/interfaces_funko_interface.html">interfaces/funko_<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/interfaces_funko_json_interface.html">interfaces/funko_<wbr/>json_<wbr/>interface</a></li></ul></li></ul></div></details></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>

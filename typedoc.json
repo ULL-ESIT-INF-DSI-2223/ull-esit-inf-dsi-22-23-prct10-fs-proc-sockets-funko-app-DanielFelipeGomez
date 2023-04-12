@@ -1,0 +1,9 @@
+{
+  "entryPoints": [
+    "./src/entities/*.ts",
+    "./src/handler/*.ts",
+    "./src/enumerables/*.ts",
+    "./src/interfaces/*.ts",
+  ],
+  "out": "./docs"
+}

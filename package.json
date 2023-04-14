@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
-    "tsx": "tsc --outDir dist",
+    "tsx": "rm -r dist/ ; tsc --outDir dist",
     "doc": "typedoc",
     "test": "mocha",
     "coverage": "c8 npm test && c8 report --reporter=lcov"

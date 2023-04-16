@@ -2,9 +2,9 @@
 
 import 'mocha';
 import {expect} from 'chai';
-import {Funko} from "../../src/entities/funko.js";
-import { TipoFunko } from "../../src/enumerables/tipo_funko_enum.js";
-import { GeneroFunko } from "../../src/enumerables/genero_funko_enum.js";
+import {Funko} from "../../src/ejercicio-3/entities/funko.js";
+import { TipoFunko } from "../../src/ejercicio-3/enumerables/tipo_funko_enum.js";
+import { GeneroFunko } from "../../src/ejercicio-3/enumerables/genero_funko_enum.js";
 import chalk from 'chalk';
 
 describe('Pruebas de la clase Funko', function () {

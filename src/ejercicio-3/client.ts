@@ -1,9 +1,21 @@
 import chalk from 'chalk';
 import net from 'net';
 
-
+/**
+ * Clase Cliente que se encarga de enviar un mensaje al servidor
+ * y mostrar por pantalla el resultado de la operación
+ */
 class Cliente {
     public mensaje: any;
+    /**
+     * Se crea un socket que se conecta al servidor,
+     * se toman los argumentos de la línea de comandos
+     * y se envía un mensaje al servidor con el comando
+     * y los argumentos
+     * La respuesta del servidor se almacena en una variable
+     * y se muestra por pantalla cuando el servidor cierra la conexión
+     * @param socket Socket que se conecta al servidor
+     */
     constructor(public socket = net.connect({port: 60300})) {
 
         let argumentos: string[] = []
@@ -19,14 +31,12 @@ class Cliente {
             if (messageLimit !== -1) {
                 this.mensaje = JSON.parse(wholeData.substring(0, messageLimit).toString());
                 wholeData = wholeData.substring(messageLimit + 1);
-                // console.log(this.mensaje.request)
                 this.socket.end();
             }
         });
 
 
         this.socket.on('end', () => {
-            console.log(`--->${this.mensaje.success}<---`)
             if (this.mensaje.requestType === 'add') {
                 if (this.mensaje.success === 'success') {
                     console.log(chalk.green(`Funko ${this.mensaje.idFunko} agregado correctamente`))
@@ -52,13 +62,15 @@ class Cliente {
                     console.log(chalk.red(`Funko ${this.mensaje.request} no leido`))
                 }
             } else if (this.mensaje.requestType === 'list') {
-                if (this.mensaje.success === 'success') {
-                    console.log(chalk.green(this.mensaje.request))
-                } else {
-                    console.log(chalk.red(`Funkos no leidos`))
-                }
+                console.log(this.mensaje.request)
+            } else if (this.mensaje.requestType === 'error'){
+                console.log(chalk.red(`${this.mensaje.request}`))
             }
         })
+
+        this.socket.on('error', (error) => {
+            console.log(`Connection closed due to error: ${error}`);
+        });
     }
 
 

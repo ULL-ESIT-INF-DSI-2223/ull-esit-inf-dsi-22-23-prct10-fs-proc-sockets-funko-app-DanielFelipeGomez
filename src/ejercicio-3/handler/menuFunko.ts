@@ -96,7 +96,6 @@ export class MenuFunko {
                 const funko = new Funko(funkoJSON._id, funkoJSON._nombre, funkoJSON._descripcion, funkoJSON._tipo, funkoJSON._genero, funkoJSON._franquicia, funkoJSON._numero, funkoJSON._exclusivo, funkoJSON._caracteristica_especial, funkoJSON._valor_mercado);
                 console.log(funko.toString());
             }
-
         });
     }
 
@@ -109,7 +108,6 @@ export class MenuFunko {
         const filePath = './db/' + nombreUsuario + '/' + String(id) + '.json';
         if (fs.existsSync(filePath)) {
             const funkoJSON = ManejadorJSON.leerJSON(filePath);
-            console.log(chalk.bgBlack.white.bold('------------------------------------'));
             if (funkoJSON !== undefined) {
                 const funko = new Funko(funkoJSON._id, funkoJSON._nombre, funkoJSON._descripcion, funkoJSON._tipo, funkoJSON._genero, funkoJSON._franquicia, funkoJSON._numero, funkoJSON._exclusivo, funkoJSON._caracteristica_especial, funkoJSON._valor_mercado);
                 console.log('success:' + funko.toString());

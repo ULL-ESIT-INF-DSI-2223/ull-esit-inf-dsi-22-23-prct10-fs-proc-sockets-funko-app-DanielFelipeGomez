@@ -1,9 +1,11 @@
 {
   "entryPoints": [
-    "./src/entities/*.ts",
-    "./src/handler/*.ts",
-    "./src/enumerables/*.ts",
-    "./src/interfaces/*.ts",
+    "./src/ejercicio-3/entities/*.ts",
+    "./src/ejercicio-3/handler/*.ts",
+    "./src/ejercicio-3/enumerables/*.ts",
+    "./src/ejercicio-3/interfaces/*.ts",
+    "./src/ejercicio-2/*.ts",
+    "./src/ejercicio-3/*.ts",
   ],
   "out": "./docs"
 }

@@ -1,4 +1,3 @@
-import { ClientRequest } from 'http';
 import net from 'net';
 
 const client = net.connect({port: 60300});

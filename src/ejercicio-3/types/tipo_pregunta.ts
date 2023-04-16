@@ -1,3 +1,1 @@
-export type TipoPregunta = {
-    type: 'add' | 'update' | 'remove' | 'read' | 'list';
-}
+export type TipoPregunta = 'add' | 'update' | 'remove' | 'read' | 'list';
